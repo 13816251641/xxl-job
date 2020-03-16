@@ -37,11 +37,11 @@ public class SampleXxlJob {
     @XxlJob("demoJobHandler")
     public ReturnT<String> demoJobHandler(String param) throws Exception {
         XxlJobLogger.log("XXL-JOB, Hello World.");
-
-        for (int i = 0; i < 5; i++) {
+        System.out.println("demoJobHandler");
+      /*  for (int i = 0; i < 5; i++) {
             XxlJobLogger.log("beat at:" + i);
             TimeUnit.SECONDS.sleep(2);
-        }
+        }*/
         return ReturnT.SUCCESS;
     }
 
